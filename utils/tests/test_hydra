@@ -1,0 +1,11 @@
+import unittest
+from app import app
+
+class HydraTestCase(unittest.TestCase):
+    def setUp(self):
+        self.app = app.test_client()
+
+    def test_hydra_attack(self):
+        response = self.app.post('/hydra/attack', json={'target': 'localhost', 'service': 'ssh', 'wordlist': '/path/to/wordlist'})
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('result', response.json)
