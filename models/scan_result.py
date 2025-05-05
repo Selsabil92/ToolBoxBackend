@@ -1,12 +1,14 @@
+# models/scan_result.py
 from models import db
-from datetime import datetime
-from sqlalchemy.dialects.postgresql import JSON
 
 class ScanResult(db.Model):
+    __tablename__ = 'scan_results'
+
     id = db.Column(db.Integer, primary_key=True)
-    target = db.Column(db.String(255), nullable=False)
-    result = db.Column(JSON, nullable=False)
-    tool = db.Column(db.String(50), default='nmap')
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    scan_type = db.Column(db.String(50), nullable=False)
+    result_data = db.Column(db.Text, nullable=False)
+    timestamp = db.Column(db.DateTime, default=db.func.current_timestamp())
 
-
+    def __init__(self, scan_type, result_data):
+        self.scan_type = scan_type
+        self.result_data = result_data

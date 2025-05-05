@@ -1,7 +1,4 @@
 from flask_sqlalchemy import SQLAlchemy
 
+# Initialisation de SQLAlchemy
 db = SQLAlchemy()
-
-# Si l'erreur persiste, essaye d'importer comme suit :
-# from flask_sqlalchemy import SQLAlchemy
-# db = SQLAlchemy(app)
