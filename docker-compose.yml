@@ -1,0 +1,47 @@
+services:
+  backend:
+    build: .
+    container_name: flask_backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_DB: toolbox
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:alpine
+    container_name: redis_cache
+    ports:
+      - "6379:6379"
+
+  celery:
+    build: .
+    container_name: celery_worker
+    command: celery -A celery_worker.celery worker --loglevel=info
+    depends_on:
+      - backend
+      - redis
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+
+volumes:
+  postgres_data:
