@@ -27,33 +27,33 @@ Structure du projet:
 Installation
 
 Cloner le projet :
-  git clone https://github.com/Selsabil92/ToolBoxBackend.git
-  cd ToolBoxBackend
+- git clone https://github.com/Selsabil92/ToolBoxBackend.git
+- cd ToolBoxBackend
 
 Configurer l’environnement virtuel :
-  python -m venv venv
-  source venv/bin/activate  # Linux/Mac
-  venv\Scripts\activate     # Windows
+- python -m venv venv
+- source venv/bin/activate  # Linux/Mac
+- venv\Scripts\activate     # Windows
 
 Installer les dépendances :
 
-  pip install -r requirements.txt
+- pip install -r requirements.txt
 
 Configurer les variables d’environnement :
 
 Créer un fichier .env à la racine avec :
 
-  DATABASE_URL=postgresql://postgres:ToolBoxPentest@localhost:5432/toolbox
-  SECRET_KEY=ToolBoxPentestSecure
+- DATABASE_URL=postgresql://postgres:ToolBoxPentest@localhost:5432/toolbox
+SECRET_KEY=ToolBoxPentestSecure
 
 Appliquer les migrations :
-  alembic upgrade head
+- alembic upgrade head
 
 Lancer l'application :
-  python app.py
+- python app.py
 
 Utilisation via Docker (optionnel) : 
-  docker-compose up --build
+- docker-compose up --build
 
 Auteur
 Projet développé par PentestOPS dans le cadre du mastère Cybersécurité - Sup de Vinci (2025)
