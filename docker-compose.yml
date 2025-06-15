@@ -11,6 +11,8 @@ services:
     depends_on:
       - db
       - redis
+    mem_limit: 512m
+    cpus: 0.5
 
   db:
     image: postgres:15
@@ -24,12 +26,16 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    mem_limit: 1g
+    cpus: 1.0
 
   redis:
     image: redis:alpine
     container_name: redis_cache
     ports:
       - "6379:6379"
+    mem_limit: 256m
+    cpus: 0.3
 
   celery:
     build: .
@@ -42,6 +48,8 @@ services:
       - .:/app
     env_file:
       - .env
+    mem_limit: 512m
+    cpus: 0.5
 
 volumes:
   postgres_data:
