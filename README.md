@@ -12,12 +12,7 @@ ToolBoxPentest est un backend API développé en Python avec Flask. Il constitue
 
 🧪 Technologies utilisées  
 
-<<<<<<< HEAD
 <img src="https://i.imgur.com/GNTGVyK.png" alt="Technologies utilisées" width="500"/>
-
-=======
-![Technologies utilisées](https://i.imgur.com/GNTGVyK.png)
->>>>>>> afa680f0535be06d9bf00e04476642e01a4062d1
 
 📁 Structure du projet
 ToolBoxBackend/
