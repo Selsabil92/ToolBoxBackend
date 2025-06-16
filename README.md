@@ -10,8 +10,8 @@ ToolBoxPentest est un backend API développé en Python avec Flask. Il constitue
 •	 Migrations de base de données avec Alembic
 •	 Déploiement via Docker / Docker Compose
 
-🧪 Technologies utilisées
-![Technologies utilisées](assets/technologies.png)
+🧪 Technologies utilisées  
+![Technologies utilisées](https://i.imgur.com/abcd1234.png)
 
 📁 Structure du projet
 ToolBoxBackend/
