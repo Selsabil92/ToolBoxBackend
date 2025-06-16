@@ -20,7 +20,6 @@ ToolBoxBackend/
 │   ├── routes/           # Fichiers de routing API
 │   ├── services/         # Logique métier : scans, analyse, etc.
 │   ├── models/           # Définition des modèles de données
-│   ├── schemas/          # Schémas de validation
 │   └── app.py            # Point d’entrée Flask
 ├── alembic/              # Répertoire des migrations
 ├── Dockerfile            # Image backend
