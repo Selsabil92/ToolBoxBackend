@@ -33,22 +33,26 @@ ToolBoxBackend/
  1. Cloner le projet
 git clone https://github.com/Selsabil92/ToolBoxBackend.git
 cd ToolBoxBackend
- 2. Créer un environnement virtuel
+
+ 3. Créer un environnement virtuel
 python -m venv venv
 source venv/bin/activate        # Linux/Mac
 venv\Scripts\activate           # Windows
-3. Installer les dépendances
-bash
-CopierModifier
+
+5. Installer les dépendances
 pip install -r requirements.txt
- 4. Configurer les variables d’environnement
+
+7. Configurer les variables d’environnement
 Créer un fichier .env à la racine du projet avec :
 DATABASE_URL=postgresql://postgres:ToolBoxPentest@localhost:5432/toolbox
 SECRET_KEY=ToolBoxPentestSecure
- 5. Appliquer les migrations de base de données
+
+9. Appliquer les migrations de base de données
 alembic upgrade head
-6. Lancer l'application
+
+11. Lancer l'application
 python app.py
+
 🐳 Utilisation avec Docker (optionnel)
 Si vous préférez utiliser Docker :
 docker-compose up --build
