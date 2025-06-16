@@ -11,7 +11,7 @@ ToolBoxPentest est un backend API développé en Python avec Flask. Il constitue
 •	 Déploiement via Docker / Docker Compose
 
 🧪 Technologies utilisées
-![Technologies utilisées](https://raw.githubusercontent.com/Selsabil92/ToolBoxBackend/main/assets/technologies.png)
+![Technologies utilisées](assets/technologies.png)
 
 📁 Structure du projet
 ToolBoxBackend/
