@@ -59,5 +59,4 @@ docker-compose up --build
 Cela lancera le backend Flask ainsi que la base PostgreSQL définie dans docker-compose.yml.
 
 👩‍💻 Auteur
-Projet développé par PentestOPS(Selsabil GUENNOUNI, luCAS FOURRAGE, Yohann MATHURINE) dans le cadre du mastère Cybersécurité - Sup de Vinci (2025).
-
+Projet développé par PentestOPS(Selsabil GUENNOUNI, Lucas FOURRAGE, Yohann MATHURINE) dans le cadre du mastère Cybersécurité - Sup de Vinci (2025).
