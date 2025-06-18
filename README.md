@@ -3,12 +3,12 @@ ToolBoxPentest est un backend API développé en Python avec Flask. Il constitue
 
 🚀 Fonctionnalités
 •	Lancement de scans automatisés : Hydra, OpenVAS, Nmap, etc.
-•	 Récupération et enregistrement des résultats
+•	Récupération et enregistrement des résultats
 •	Gestion des utilisateurs et authentification sécurisée
 •	Intégration à une base de données PostgreSQL
 •	Architecture modulaire : séparation claire des services, routes, modèles
-•	 Migrations de base de données avec Alembic
-•	 Déploiement via Docker / Docker Compose
+•	Migrations de base de données avec Alembic
+•	Déploiement via Docker / Docker Compose
 
 🧪 Technologies utilisées  
 
