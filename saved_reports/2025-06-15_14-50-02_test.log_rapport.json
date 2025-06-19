@@ -1,0 +1,15 @@
+{
+    "filename": "test.log",
+    "type": "uploads/forensic/test.log: Unicode text, UTF-8 text",
+    "hashes": {
+      "md5": "5eefe07da01ee53ae1a59b74a6a294f6",
+      "sha1": "09f6e5b637b96f0570c67478fc65b1f7753ec867",
+      "sha256": "fcb0b096f994708de0b76a774134a66b1b52f5a31d7bdc3c663981e20ba5000b"
+    },
+    "analysis": {
+      "strings": "[INFO] Service d\nmarr\n correctement\n[ERROR] Impossible de se connecter \n la base de donn\n[WARNING] Authentification \nchou\ne pour l'utilisateur root\n[INFO] Fin de session",
+      "log_keywords": [
+        "[ERROR] Impossible de se connecter \u00e0 la base de donn\u00e9es"
+      ]
+    }
+  }

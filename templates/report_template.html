@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Rapport de Sécurité</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 18px;
+      margin-top: 30px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    pre {
+      background-color: #f2f2f2;
+      padding: 15px;
+      border-radius: 5px;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .meta {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    .section {
+      margin-top: 25px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 8px;
+      text-align: left;
+      font-size: 14px;
+      vertical-align: top;
+    }
+    th {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Rapport d'Analyse de Sécurité</h1>
+
+  <div class="meta">
+    <p><strong>Fichier :</strong> {{ filename }}</p>
+    <p><strong>Type d'outil :</strong> 
+      {% if 'nikto' in (scan_type or '') or 'nikto' in (data.type or '') %}
+        Nikto
+      {% else %}
+        {{ scan_type|capitalize }}
+      {% endif %}
+    </p>
+    {% if data.target %}
+      <p><strong>Cible :</strong> {{ data.target }}</p>
+    {% endif %}
+    {% if data.date %}
+      <p><strong>Date :</strong> {{ data.date }}</p>
+    {% endif %}
+    {% if data.status %}
+      <p><strong>Status :</strong> {{ data.status }}</p>
+    {% endif %}
+  </div>
+
+  {% set all_vulns = data.vulnerabilities if data.vulnerabilities is defined else [] %}
+  {% if data.findings is defined and data.findings|length > 0 %}
+    {% set all_vulns = data.findings %}
+  {% endif %}
+
+  {% if all_vulns and all_vulns|length > 0 %}
+    <div class="section">
+      <h2>🔍 Vulnérabilités détectées</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Port</th>
+            <th>Protocole</th>
+            <th>Script</th>
+            <th>Résultat</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for vuln in all_vulns %}
+            <tr>
+              <td>{{ loop.index }}</td>
+              <td>{{ vuln.port }}</td>
+              <td>{{ vuln.protocol }}</td>
+              <td>{{ vuln.script }}</td>
+              <td><pre>{{ vuln.output }}</pre></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% endif %}
+
+  {% if data.raw_output %}
+    <div class="section">
+      <h2>🧾 Sortie brute</h2>
+      <pre>{{ data.raw_output }}</pre>
+    </div>
+  {% endif %}
+
+  {% if data.scan_output %}
+    <div class="section">
+      <h2>📤 Sortie brute (scan_output)</h2>
+      {% if data.scan_output.output %}
+        <pre>{{ data.scan_output.output }}</pre>
+      {% else %}
+        <pre>{{ data.scan_output }}</pre>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if data.analysis %}
+    <div class="section">
+      <h2>🧠 Analyse</h2>
+      <pre>{{ data.analysis | tojson(indent=2) }}</pre>
+    </div>
+  {% endif %}
+
+  {% if data.hashes %}
+    <div class="section">
+      <h2>🔐 Hashs</h2>
+      <pre>{{ data.hashes | tojson(indent=2) }}</pre>
+    </div>
+  {% endif %}
+
+  {% if data.type %}
+    <div class="section">
+      <h2>📄 Type de Fichier</h2>
+      <pre>{{ data.type }}</pre>
+    </div>
+  {% endif %}
+
+</body>
+</html>

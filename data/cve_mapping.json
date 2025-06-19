@@ -1,0 +1,63 @@
+{
+    "CVE-2021-41773": {
+      "name": "Apache Path Traversal",
+      "exploit_id": "multi/http/apache_normalize_path_rce",
+      "payload": "linux/x64/meterpreter/reverse_tcp",
+      "description": "Exploite Apache vulnérable (2.4.49) via path traversal"
+    },
+    "CVE-2007-6750": {
+      "name": "Slowloris Denial of Service",
+      "exploit_id": "auxiliary/dos/http/slowloris",
+      "payload": "generic/none",
+      "description": "DOS attack via Slowloris HTTP partial requests"
+    },
+    "CVE-2022-22965": {
+      "name": "Spring4Shell RCE",
+      "exploit_id": "multi/http/spring_core_rce",
+      "payload": "java/meterpreter/reverse_tcp",
+      "description": "Remote Code Execution via Spring Core vulnerability"
+    },
+    "CVE-2021-44228": {
+      "name": "Log4Shell RCE",
+      "exploit_id": "multi/http/log4shell_header_injection",
+      "payload": "java/meterpreter/reverse_tcp",
+      "description": "Log4j JNDI injection via HTTP headers"
+    },
+    "CVE-2019-0708": {
+      "name": "BlueKeep",
+      "exploit_id": "windows/rdp/cve_2019_0708_bluekeep_rce",
+      "payload": "windows/x64/meterpreter/reverse_tcp",
+      "description": "Remote Desktop exploit on Windows XP/7/2008"
+    },
+    "CVE-2021-26855": {
+      "name": "Exchange SSRF ProxyShell",
+      "exploit_id": "multi/http/exchange_proxylogon_rce",
+      "payload": "windows/meterpreter/reverse_tcp",
+      "description": "Server-side request forgery in Microsoft Exchange"
+    },
+    "CVE-2020-0796": {
+      "name": "SMBGhost",
+      "exploit_id": "windows/smb/ms17_010_eternalblue",
+      "payload": "windows/x64/meterpreter/reverse_tcp",
+      "description": "Remote code execution via SMBv3"
+    },
+    "CVE-2017-5638": {
+      "name": "Struts2 Jakarta Multipart RCE",
+      "exploit_id": "multi/http/struts2_content_type_ognl",
+      "payload": "java/meterpreter/reverse_tcp",
+      "description": "OGNL injection in Apache Struts"
+    },
+    "CVE-2018-11776": {
+      "name": "Struts2 Namespace OGNL",
+      "exploit_id": "multi/http/struts2_namespace_ognl",
+      "payload": "java/meterpreter/reverse_tcp",
+      "description": "Apache Struts OGNL injection via namespace"
+    },
+    "CVE-2014-6271": {
+      "name": "Shellshock Bash RCE",
+      "exploit_id": "multi/http/apache_mod_cgi_bash_env_exec",
+      "payload": "linux/x86/meterpreter/reverse_tcp",
+      "description": "Bash environment variable injection (Shellshock)"
+    }
+  }
+  

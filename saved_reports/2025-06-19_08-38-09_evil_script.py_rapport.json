@@ -1,0 +1,12 @@
+{
+    "filename": "evil_script.py",
+    "type": "uploads/forensic/evil_script.py: ASCII text",
+    "hashes": {
+      "md5": "92f457b958f31762a9578317402c270c",
+      "sha1": "639c63407aa30a6c7a1ecfe848841b3d526f2dbb",
+      "sha256": "f00250bbf127a707ef23f5db89c947a52fe5209af2264a4a8a3c0cee0ebe5432"
+    },
+    "analysis": {
+      "strings": "import os\nos.system(\"rm -rf /\") "
+    }
+  }

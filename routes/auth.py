@@ -8,7 +8,7 @@ from routes.decorators import admin_required  # Pour les routes réservées aux 
 
 auth_bp = Blueprint('auth', __name__)
 
-# 🔐 Login utilisateur
+# Login utilisateur
 @auth_bp.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
@@ -59,7 +59,7 @@ def profile():
     return jsonify({'message': 'User not found'}), 404
 
 
-# 🛡️ Route réservée aux admins
+# Route réservée aux admins
 @auth_bp.route('/admin-dashboard', methods=['GET'])
 @jwt_required()
 @admin_required

@@ -1,0 +1,23 @@
+{
+    "CVE-2019-0708": {
+      "exploit_id": "exploit/windows/rdp/cve_2019_0708_bluekeep_rce",
+      "payload": "windows/x64/meterpreter/reverse_tcp"
+    },
+    "CVE-2019-9624": {
+      "exploit_id": "exploit/linux/http/webmin_backdoor_rce",
+      "payload": "cmd/unix/reverse_perl"
+    },
+    "CVE-2019-5825": {
+      "exploit_id": "exploit/multi/browser/chrome_array_map_oob",
+      "payload": "generic/custom"
+    },
+    "CVE-2021-44228": {
+      "exploit_id": "exploit/multi/http/log4shell_jndi_injection",
+      "payload": "java/meterpreter/reverse_tcp"
+    },
+    "CVE-2023-49113": {
+      "exploit_id": "exploit/php/roundcube_post_auth_rce",
+      "payload": "php/meterpreter/reverse_tcp"
+    }
+  }
+  

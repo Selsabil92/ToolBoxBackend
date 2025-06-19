@@ -1,0 +1,12 @@
+{
+    "filename": "evil_script.py",
+    "type": "uploads/forensic/evil_script.py: Unicode text, UTF-8 text",
+    "hashes": {
+      "md5": "88cabc2929f14079895a22dd4dfffb4b",
+      "sha1": "0a4860b0746af5288048eb3099c8959ca9bc2587",
+      "sha256": "3420caa6d94d2f91e3dd26fd6df427bf8523ef2c45e968eb325544ac626d7a42"
+    },
+    "analysis": {
+      "strings": "import os\n# Code potentiellement malveillant\nos.system(\"rm -rf /\")  # NE PAS EX\nCUTER "
+    }
+  }
