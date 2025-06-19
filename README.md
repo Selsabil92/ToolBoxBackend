@@ -1,14 +1,16 @@
 🛠️ ToolBoxPentest - Backend API
-ToolBoxPentest est un backend API développé en Python avec Flask. Il constitue le cœur d’une boîte à outils offensive destinée aux tests d’intrusion (pentest). Ce backend permet de lancer, enregistrer et centraliser différents types de scans de sécurité réseau ou applicatif, tout en intégrant des services d’analyse et de réponse automatisée.
+ToolBoxPentest** est une API backend développée en **Python (Flask)**. Elle constitue le cœur d’une **boîte à outils offensive** destinée aux tests d’intrusion (pentest). Ce backend permet de **lancer, enregistrer et centraliser** différents types de scans réseau et applicatif, tout en intégrant des **services d’analyse et de réponse automatisée**.
+
 
 🚀 Fonctionnalités
-•	Lancement de scans automatisés : Hydra, OpenVAS, Nmap, etc.
-•	Récupération et enregistrement des résultats
-•	Gestion des utilisateurs et authentification sécurisée
-•	Intégration à une base de données PostgreSQL
-•	Architecture modulaire : séparation claire des services, routes, modèles
-•	Migrations de base de données avec Alembic
-•	Déploiement via Docker / Docker Compose
+
+- Lancement de scans automatisés : **Hydra**, **OpenVAS**, **Nmap**, etc.
+- Récupération et enregistrement des résultats de scan
+- Gestion des utilisateurs avec authentification sécurisée (JWT)
+- Architecture modulaire (routes, services, modèles bien séparés)
+- Intégration à une base de données **PostgreSQL**
+- Migrations de base de données avec **Alembic**
+- Déploiement simplifié via **Docker / Docker Compose**
 
 🧪 Technologies utilisées  
 
@@ -17,16 +19,17 @@ ToolBoxPentest est un backend API développé en Python avec Flask. Il constitue
 📁 Structure du projet
 ToolBoxBackend/
 ├── app/
-│   ├── routes/           # Fichiers de routing API
-│   ├── services/         # Logique métier : scans, analyse, etc.
-│   ├── models/           # Définition des modèles de données
-│   └── app.py            # Point d’entrée Flask
-├── alembic/              # Répertoire des migrations
-├── Dockerfile            # Image backend
-├── docker-compose.yml    # Orchestration backend + base de données
-├── requirements.txt      # Dépendances Python
-├── .env.example          # Exemple de fichier de configuration
-└── README.md             # Documentation du projet
+│ ├── routes/ # Fichiers de routing de l'API (ex: /scan/nmap, /auth/login)
+│ ├── services/ # Logique métier : exécution de scans, analyse, etc.
+│ ├── models/ # Modèles SQLAlchemy pour la BDD
+│ └── app.py # Point d’entrée principal (serveur Flask)
+│
+├── alembic/ # Répertoire de gestion des migrations
+├── Dockerfile # Image Docker du backend
+├── docker-compose.yml # Orchestration backend + base PostgreSQL
+├── requirements.txt # Liste des dépendances Python
+├── .env.example # Exemple de configuration (.env)
+└── README.md # Documentation du projet
 
 ⚙️ Installation
 
@@ -58,5 +61,13 @@ Si vous préférez utiliser Docker :
 docker-compose up --build
 Cela lancera le backend Flask ainsi que la base PostgreSQL définie dans docker-compose.yml.
 
+🧭 Frontend associé
+Une interface React est disponible pour interagir avec l’API :
+https://github.com/YohannGHub/frontend1.git
+
 👩‍💻 Auteur
 Projet développé par PentestOPS(Selsabil GUENNOUNI, Lucas FOURRAGE, Yohann MATHURINE) dans le cadre du mastère Cybersécurité - Sup de Vinci (2025).
+
+📄 Licence
+Ce projet est publié sous la licence MIT.
+Usage libre à des fins personnelles, éducatives ou professionnelles.
