@@ -67,6 +67,7 @@ https://github.com/YohannGHub/frontend1.git
 
 👩‍💻 Auteur
 Projet développé par PentestOPS(Selsabil GUENNOUNI, Lucas FOURRAGE, Yohann MATHURINE) dans le cadre du mastère Cybersécurité - Sup de Vinci (2025).
+**Ce projet m’a permis de renforcer mes compétences en cybersécurité offensive, d’approfondir ma maîtrise de l’automatisation des tâches et d’adopter une approche rigoureuse en matière de sécurité des systèmes.**
 
 📄 Licence
 Ce projet est publié sous la licence MIT.
