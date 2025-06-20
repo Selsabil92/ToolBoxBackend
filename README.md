@@ -14,7 +14,7 @@ ToolBoxPentest** est une API backend développée en **Python (Flask)**. Elle co
 
 🧪 Technologies utilisées  
 
-<img src="https://i.ibb.co/j99bcSj3/techno.webp" alt="Technologies utilisées" width="500"/>
+<img src="https://i.ibb.co/Kxw95RbJ/Techno.webp" alt="Technologies utilisées" width="500"/>
 
 📁 Structure du projet
 ToolBoxBackend/
